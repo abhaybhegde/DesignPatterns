@@ -14,13 +14,7 @@ public class Record {
 	private float salary;
 	private String department;
 	
-	
-	public Record(String firstName,String lastName, float salary, String department) {
-		createJsonData(firstName,lastName,salary,department);
-	}
-
-
-	private void createJsonData(String firstName, String lastName, float salary, String department) {
+	public void populateData(String firstName, String lastName, double salary, String department) {
 		
 		JSONObject json = new JSONObject();
 		
@@ -33,9 +27,6 @@ public class Record {
 			logger.debug("Error while constructing JSON");
 			e.printStackTrace();
 		}
-
-		
-		
 	}
 
 }
